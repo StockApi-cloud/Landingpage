@@ -12,8 +12,14 @@
             color: black;
         }
         .hero-bg {
-            background: url('https://res.cloudinary.com/dyrn2eg1j/image/upload/v1744785746/Untitled_design_23_gsifyg.png') no-repeat center center/cover; /* Bihar-related image */
+            background: url('https://res.cloudinary.com/dyrn2eg1j/image/upload/v1744873541/STOCK_ARCHERY_1_kcyjuj.gif') no-repeat center center/cover; /* Default for larger screens */
             opacity: 0.9;
+        }
+        /* Media query for small screens (mobile phones, typically <= 640px) */
+        @media (max-width: 640px) {
+            .hero-bg {
+                background: url('https://res.cloudinary.com/dyrn2eg1j/image/upload/v1744869758/STOCK_ARCHERY_11_vta8uz.png') no-repeat center center/cover; /* Mobile-specific image */
+            }
         }
         .bihar-theme {
             background: url('https://www.transparenttextures.com/patterns/rice-paper.png'), linear-gradient(to bottom, #f97316, #ef4444);
@@ -68,6 +74,28 @@
             display: inline-block;
             margin-bottom: 20px;
         }
+        .review-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            max-width: 300px;
+            margin: 0 auto 20px auto;
+        }
+        .review-card:hover {
+            transform: translateY(-5px);
+        }
+        .review-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 <body>
@@ -84,12 +112,12 @@
     <section class="py-16 bihar-theme">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-6">Why Choose Stock Archery?</h2>
-            <p class="text-lg mb-6">Based in the heart of Bihar, we bring world-class trading education to your doorstep. Our live classes are designed for beginners and pros alike, with a focus on practical, hands-on learning.</p>
+            <p class="text-lg mb-6">Based in the heart of Bihar, we bring world-class trading education to your doorstep. We have taught over 1000 students, and our live classes are designed for beginners and pros alike, with a focus on practical, hands-on learning.</p>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="card">
                     <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1726052942/Screenshot_30_fbcyw9.png" alt="Expert Mentors" class="card-img">
                     <h3 class="text-xl font-semibold mb-2">Expert Mentors</h3>
-                    <p>Learn from Bihar's finest trading experts with years of market experience.</p>
+                    <p>Learn from Bihar's finest trading experts with years of market experience. Our mentors are NCFM certified.</p>
                 </div>
                 <div class="card">
                     <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1741764726/DSC_3230_swvlls.jpg" alt="Live Classes" class="card-img">
@@ -120,22 +148,22 @@
             <p class="text-lg mb-8">Our courses cover everything from basics to advanced trading strategies.</p>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="card">
-                    <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1741764726/DSC_3230_swvlls.jpg" alt="Stock Market Basics" class="card-img">
+                    <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1744870155/Flux_Dev_Create_a_vibrant_modern_infographicstyle_illustration_2_jjxigr.jpg" alt="Stock Market Basics" class="card-img">
                     <h3 class="text-xl font-semibold mb-2">Stock Market Basics</h3>
                     <p>Understand how the stock market works and start with confidence.</p>
                 </div>
                 <div class="card">
-                    <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1726052942/Screenshot_30_fbcyw9.png" alt="Technical Analysis" class="card-img">
+                    <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1744870525/image_xotraq.jpg" alt="Technical Analysis" class="card-img">
                     <h3 class="text-xl font-semibold mb-2">Technical Analysis</h3>
                     <p>Master charts, patterns, and indicators to predict market trends.</p>
                 </div>
                 <div class="card">
-                    <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1744786128/2018032161_c1bgyp.jpg" alt="Risk Management" class="card-img">
+                    <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1744870711/image_1_uoprvu.jpg" alt="Risk Management" class="card-img">
                     <h3 class="text-xl font-semibold mb-2">Risk Management</h3>
                     <p>Learn strategies to minimize losses and protect your investments.</p>
                 </div>
                 <div class="card">
-                    <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1726052942/Screenshot_30_fbcyw9.png" alt="Portfolio Building" class="card-img">
+                    <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1744871282/istockphoto-1453953453-612x612_bkuwta.jpg" alt="Portfolio Building" class="card-img">
                     <h3 class="text-xl font-semibold mb-2">Portfolio Building</h3>
                     <p>Create a diversified portfolio to maximize returns.</p>
                 </div>
@@ -146,13 +174,38 @@
         </div>
     </section>
 
+    <!-- Student Reviews Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">What Our Students Say</h2>
+            <p class="text-lg mb-8">Hear from the over 1000 students we’ve empowered with trading skills.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="review-card">
+                    <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725950247/fotor-202409101271_l8tdbd.png" alt="Rajesh Kumar" class="review-img">
+                    <p class="text-lg mb-2">"Stock Archery transformed my trading game! The live classes and NCFM certified mentors made it so easy to learn."</p>
+                    <p class="text-md font-semibold">- Rajesh Kumar, Patna</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152417/student5_ll2sal.png" alt="Anita Sharma" class="review-img">
+                    <p class="text-lg mb-2">"The practical approach and community support helped me build a profitable portfolio. Highly recommend!"</p>
+                    <p class="text-md font-semibold">- Anita Sharma, Gaya</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152416/student3_etfv4z.png" alt="Vikram Singh" class="review-img">
+                    <p class="text-lg mb-2">"Best decision I made! The risk management strategies saved me from big losses."</p>
+                    <p class="text-md font-semibold">- Vikram Singh, Muzaffarpur</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="py-16 bihar-theme">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-6">Join Us Today!</h2>
             <p class="text-lg mb-4">Hurry! Limited seats available. Register within:</p>
             <div id="timer">12:00:00</div>
-            <p class="text-lg mb-8">Reach out to our mentors across Bihar and start your trading journey.</p>
+            <p class="text-lg mb-8">Reach out to our NCFM certified mentors across Bihar and start your trading journey.</p>
             <a href="https://wa.me/+919229102334?text=I%20want%20to%20Enroll%20in%20Stock%20Archery%20Trading%20Course" target="_blank">
                 <button class="whatsapp-btn heartbeat bg-green-500 text-white font-bold py-3 px-6 rounded-full shadow-lg"> Register Now</button>
             </a>
